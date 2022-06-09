@@ -1,0 +1,17 @@
+/* Primary Colors*/
+/* Secondary Colors*/
+/* for every element before and
+ after apply the border box property" */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*  Import files for use */
+/*  Header styling*/
+.header {
+  display: flex;
+}/*# sourceMappingURL=bio.css.map */

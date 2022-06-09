@@ -1,0 +1,10 @@
+/*  Import files for use */
+@use "../styles/partials/colors.scss";
+@use "../styles/partials/global";
+@use "../styles/partials/mixins";
+
+
+/*  Header styling*/
+.header {
+    display: flex;
+}

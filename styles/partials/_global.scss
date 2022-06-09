@@ -1,0 +1,10 @@
+/* for every element before and
+ after apply the border box property" */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    // font-family: Arial;
+}
