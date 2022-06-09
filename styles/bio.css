@@ -13,5 +13,25 @@ body {
 /*  Import files for use */
 /*  Header styling*/
 .header {
+  background-color: #323232;
+}
+.header__image-container {
+  padding: 1rem 0;
+}
+.header__image {
+  display: block;
+  width: 8rem;
+  height: 1.5rem;
+  margin: auto;
+}
+.header__navigation-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.header__navigation-list-item {
+  margin: 1rem;
+  color: #FFFFFF;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=bio.css.map */

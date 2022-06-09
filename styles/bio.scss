@@ -1,10 +1,38 @@
 /*  Import files for use */
-@use "../styles/partials/colors.scss";
-@use "../styles/partials/global";
-@use "../styles/partials/mixins";
+@use "../styles/partials/_colors";
+@use "../styles/partials/_global" as *;
+@use "../styles/partials/_mixins";
 
 
 /*  Header styling*/
 .header {
-    display: flex;
+    background-color: colors.$primary-black;
+
+    &__image-container {
+        padding: 1rem 0;
+    }
+    &__image {
+        display: block;
+        width: 8rem;
+        height: 1.5rem;
+        margin: auto;
+
+    }
+
+    &__navigation-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+    &__navigation-list-item {
+        margin: 1rem;
+        color: colors.$primary-white;
+        font-size: 1.2rem;
+    }
+
+
 }
+
+
+
