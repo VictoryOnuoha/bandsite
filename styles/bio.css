@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  margin-left: 0;
+  margin: 0;
   padding-left: 0;
 }
 .header__nav-list-item {
@@ -42,4 +42,23 @@ body {
 .header__nav-list-item--selected {
   border-bottom: 0.3rem solid #FAFAFA;
   width: 50%;
+}
+
+/* Hero Section*/
+.hero-image {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 15rem;
+  width: 100%;
+}
+.hero-image__title {
+  margin: 0 0 1rem 1rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.hero-image-container {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=bio.css.map */

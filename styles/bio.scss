@@ -24,7 +24,7 @@
         justify-content: space-between;
         align-items: center;
         list-style-type: none;
-        margin-left: 0;
+        margin: 0;
         padding-left: 0;
     }
     &__nav-list-item {
@@ -46,5 +46,24 @@
 
 }
 
+/* Hero Section*/
+.hero-image { 
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 15rem;
+    width: 100%;
+    
+    &__title {
+        margin: 0 0 1rem 1rem;
+        color: colors.$primary-white;
+        font-size: 1.5rem;
+    }
+}
+
+.hero-image-container {
+    display: flex;
+    align-items: center;
+}
 
 
