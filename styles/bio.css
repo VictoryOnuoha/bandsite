@@ -93,6 +93,7 @@ body {
 }
 .photo__box {
   width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
 }
 .photo__title {
   padding-top: 1rem;
