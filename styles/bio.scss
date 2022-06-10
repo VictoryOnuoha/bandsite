@@ -21,14 +21,26 @@
 
     &__navigation-list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
     }
-    &__navigation-list-item {
-        margin: 1rem;
+    &__nav-list-item {
+        
         color: colors.$primary-white;
         font-size: 1.2rem;
+        text-align: center;
+        padding: 0.5rem;
+        width: 50%;
+
+        
+    }
+    &__nav-list-item--selected {
+        border-bottom: 0.3rem solid colors.$secondary-white;
+        width: 50%;
+        // margin-left: -2rem;
     }
 
 

@@ -26,12 +26,20 @@ body {
 }
 .header__navigation-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
-.header__navigation-list-item {
-  margin: 1rem;
+.header__nav-list-item {
   color: #FFFFFF;
   font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5rem;
+  width: 50%;
+}
+.header__nav-list-item--selected {
+  border-bottom: 0.3rem solid #FAFAFA;
+  width: 50%;
 }/*# sourceMappingURL=bio.css.map */
