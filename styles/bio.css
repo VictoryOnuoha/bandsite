@@ -51,14 +51,49 @@ body {
   background-position: center;
   height: 15rem;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .hero-image__title {
   margin: 0 0 1rem 1rem;
   color: #FFFFFF;
   font-size: 1.5rem;
+  z-index: 1;
+}
+.hero-image--overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 15rem;
+  width: 100%;
+  position: absolute;
 }
 
-.hero-image-container {
-  display: flex;
-  align-items: center;
+/* About section*/
+.about {
+  background-color: #FFFFFF;
+}
+
+.about-praise {
+  margin: 1rem;
+}
+.about-praise__image {
+  width: 100%;
+}
+
+.about-band {
+  margin: 1rem;
+}
+
+/* Gallery */
+.gallery {
+  background-color: #E1E1E1;
+}
+
+.photo {
+  margin: 1rem;
+}
+.photo__box {
+  width: 100%;
+}
+.photo__title {
+  padding-top: 1rem;
 }/*# sourceMappingURL=bio.css.map */
