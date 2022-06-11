@@ -1,0 +1,18 @@
+// 1) Create variable names for the tablet & desktop
+
+$tablet-breakpoint: 48rem;
+$desktop-breakpoint: 80rem;
+
+//create a mix-in setting the parameters equal to variables
+// that you just created
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}

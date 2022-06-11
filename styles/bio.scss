@@ -95,7 +95,7 @@
 }
 
 .photo {
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
 
     &__box {
         width: 100%;
@@ -107,4 +107,55 @@
     }
 }
 
+/* Footer */
+.footer {
+    background-color: colors.$primary-black;
+    color: colors.$primary-white;
 
+    &__contact {
+        margin: 0 1rem 1rem 1rem;
+
+    }
+    &__title {
+        margin-top: 0;
+        padding-top: 1rem;
+    }
+
+    &__manager {
+        margin: 1rem;
+
+    }
+
+    &__copyright {
+        margin: 1rem;
+    }
+
+    &__social {
+        margin-right: 1rem;
+    }
+}
+
+.footer__manager-title {
+    margin: 0;
+}
+.footer__manager-text {
+    width: 60%;
+}
+
+.footer__copyright {
+    margin: 3rem 1rem 0 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+.footer__copyright-text {
+    margin-bottom: 0;
+}
+
+/*Steps to creating media quuries using scss */
+// 1) Create variable names for the tablet & desktop
+//2) create a mix-in setting the parameters equal to variables
+// that you just created
+//3) ADD @content in media queries as placeholder
+// import mixins + use @include in the sections of the
+// css area you want to change 

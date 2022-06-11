@@ -89,7 +89,7 @@ body {
 }
 
 .photo {
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 .photo__box {
   width: 100%;
@@ -97,4 +97,45 @@ body {
 }
 .photo__title {
   padding-top: 1rem;
-}/*# sourceMappingURL=bio.css.map */
+}
+
+/* Footer */
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.footer__contact {
+  margin: 0 1rem 1rem 1rem;
+}
+.footer__title {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+.footer__manager {
+  margin: 1rem;
+}
+.footer__copyright {
+  margin: 1rem;
+}
+.footer__social {
+  margin-right: 1rem;
+}
+
+.footer__manager-title {
+  margin: 0;
+}
+
+.footer__manager-text {
+  width: 60%;
+}
+
+.footer__copyright {
+  margin: 3rem 1rem 0 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer__copyright-text {
+  margin-bottom: 0;
+}
+
+/*Steps to creating media quuries using scss *//*# sourceMappingURL=bio.css.map */
