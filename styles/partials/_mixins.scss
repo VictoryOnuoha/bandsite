@@ -3,7 +3,7 @@
 $tablet-breakpoint: 48rem;
 $desktop-breakpoint: 80rem;
 
-//create a mix-in setting the parameters equal to variables
+// 2) Create a mix-in setting the parameters equal to variables
 // that you just created
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {

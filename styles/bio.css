@@ -10,6 +10,23 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular-Converted.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi-Converted.woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold-Converted.woff2");
+  font-weight: bold;
+  font-style: normal;
+}
 /*  Import files for use */
 /*  Header styling*/
 .header {
@@ -138,4 +155,4 @@ body {
   margin-bottom: 0;
 }
 
-/*Steps to creating media quuries using scss *//*# sourceMappingURL=bio.css.map */
+/*Steps to creating media queries using scss *//*# sourceMappingURL=bio.css.map */

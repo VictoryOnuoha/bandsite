@@ -1,7 +1,8 @@
 /*  Import files for use */
-@use "../styles/partials/_colors";
-@use "../styles/partials/_global" as *;
-@use "../styles/partials/_mixins";
+@use "../styles/partials/colors";
+@use "../styles/partials/global" ;
+@use "../styles/partials/mixins";
+@use "../styles/partials/fonts";
 
 
 /*  Header styling*/
@@ -152,7 +153,7 @@
     margin-bottom: 0;
 }
 
-/*Steps to creating media quuries using scss */
+/*Steps to creating media queries using scss */
 // 1) Create variable names for the tablet & desktop
 //2) create a mix-in setting the parameters equal to variables
 // that you just created
