@@ -4,6 +4,7 @@
  after apply the border box property" */
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: "AvenirNext LT Pro";
 }
 
 body {
@@ -11,19 +12,20 @@ body {
 }
 
 @font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular-Converted.woff2");
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi-Converted.woff2");
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
   font-style: normal;
+  font-weight: bold;
 }
 @font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold-Converted.woff2");
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
@@ -75,10 +77,10 @@ body {
   }
 }
 .header__nav-list-item {
-  color: #FFFFFF;
+  color: #AFAFAF;
   font-size: 1.2rem;
-  font-family: "AvenirNextLTPro";
   text-align: center;
+  font-weight: 700;
   padding: 0.5rem;
   width: 50%;
   /* Media queries */
@@ -92,6 +94,7 @@ body {
 }
 .header__nav-list-item--selected {
   border-bottom: 0.3rem solid #FAFAFA;
+  color: #FFFFFF;
   width: 50%;
   font-weight: bold;
   /* Media queries */
@@ -126,6 +129,7 @@ body {
 .hero-image__title {
   margin: 0 0 1rem 1rem;
   color: #FFFFFF;
+  font-weight: 700;
   font-size: 1.5rem;
   z-index: 1;
   /* Media queries */
@@ -169,10 +173,18 @@ body {
   /* Media queries */
 }
 .about-praise__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .about-praise__image {
   width: 100%;
+}
+.about-praise__quote {
+  font-weight: 600;
+}
+.about-praise__text {
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 @media (min-width: 48rem) {
   .about-praise__container {
@@ -192,7 +204,8 @@ body {
     margin: 3rem;
   }
   .about-praise__title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-left: 1.5rem;
   }
   .about-praise__image {
     width: 90%;
@@ -209,6 +222,12 @@ body {
 .about-band {
   margin: 1rem;
   /* Media queries */
+}
+.about-band__title {
+  font-weight: 500;
+}
+.about-band__text {
+  font-weight: 400;
 }
 @media (min-width: 48rem) {
   .about-band {
@@ -275,6 +294,11 @@ body {
     margin: 0.5rem;
   }
 }
+@media (min-width: 80rem) {
+  .photo {
+    margin: 5rem 5rem 0 5rem;
+  }
+}
 
 /* Footer */
 .footer {
@@ -285,38 +309,12 @@ body {
 .footer__contact {
   margin: 0 1rem 1rem 1rem;
 }
-@media (min-width: 48rem) {
-  .footer__contact {
-    display: flex;
-    margin-bottom: 0;
-  }
-}
 .footer__title {
   margin-top: 0;
   padding-top: 2rem;
 }
-@media (min-width: 48rem) {
-  .footer__title {
-    font-size: 2rem;
-    margin: 0 1rem 2rem 2rem;
-  }
-}
-@media (min-width: 48rem) {
-  .footer__container {
-    display: flex;
-    width: 100%;
-    padding: 1rem;
-  }
-}
 .footer__manager {
   margin: 1rem;
-}
-@media (min-width: 48rem) {
-  .footer__manager {
-    margin-right: 0;
-    width: 33%;
-    text-align: left;
-  }
 }
 .footer__copyright {
   margin: 1rem;
@@ -325,8 +323,39 @@ body {
   margin-right: 1rem;
 }
 @media (min-width: 48rem) {
+  .footer__contact {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .footer__title {
+    font-size: 2rem;
+    margin: 0 1rem 2rem 2rem;
+  }
   .footer__socials {
     margin-top: 2.5rem;
+  }
+  .footer__manager {
+    margin-right: 0;
+    width: 33%;
+    text-align: left;
+  }
+  .footer__container {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__manager {
+    margin-top: 0;
+    width: 20%;
+  }
+  .footer__container {
+    padding-top: 0;
+    margin-left: 2rem;
+  }
+  .footer__contact {
+    margin-left: 2rem;
   }
 }
 
@@ -349,31 +378,41 @@ body {
   }
 }
 
-.footer__copyright {
+.footer-copyright {
   margin: 3rem 1rem 0 1rem;
   padding-bottom: 1rem;
 }
 @media (min-width: 48rem) {
-  .footer__copyright {
+  .footer-copyright {
     margin-top: 0;
   }
 }
 
-.footer__copyright-text {
+.footer-copyright__text {
   margin-bottom: 0;
+  font-weight: 400;
 }
 @media (min-width: 48rem) {
-  .footer__copyright-text {
+  .footer-copyright__text {
     font-size: 0.9rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 2rem 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer-copyright__text {
+    margin-left: 3rem;
   }
 }
 
 @media (min-width: 48rem) {
-  .footer__copyright--selected {
+  .footer-copyright--selected {
     position: absolute;
     top: 2.8rem;
     right: 3rem;
   }
 }
-/*Steps to creating media queries using scss *//*# sourceMappingURL=bio.css.map */
+@media (min-width: 80rem) {
+  .footer-copyright--selected {
+    right: 15rem;
+  }
+}/*# sourceMappingURL=bio.css.map */

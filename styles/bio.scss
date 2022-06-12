@@ -51,10 +51,10 @@
     }
     &__nav-list-item {
         
-        color: colors.$primary-white;
+        color: colors.$primary-silver;
         font-size: 1.2rem;
-        font-family: "AvenirNextLTPro";
         text-align: center;
+        font-weight: 700;
         padding: 0.5rem;
         width: 50%;
             /* Media queries */
@@ -68,6 +68,7 @@
     }
     &__nav-list-item--selected {
         border-bottom: 0.3rem solid colors.$secondary-white;
+        color: colors.$primary-white;
         width: 50%;
         font-weight: bold;
                  /* Media queries */
@@ -100,6 +101,7 @@
     &__title {
         margin: 0 0 1rem 1rem;
         color: colors.$primary-white;
+        font-weight: 700;
         font-size: 1.5rem;
         z-index: 1;
                /* Media queries */
@@ -137,11 +139,20 @@
     margin: 1rem;
     
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+       
+        font-weight: 700;
     }
 
     &__image {
         width: 100%;
+    }
+    &__quote {
+        font-weight: 600;
+    }
+    &__text {
+        font-weight: 600 ;
+        font-size: 0.9rem;
     }
          /* Media queries */
         @include mixins.tablet {
@@ -160,7 +171,8 @@
         @include mixins.desktop {
                 margin: 3rem;
             &__title {
-                font-size: 1.8rem;
+                font-size: 2rem;
+                margin-left: 1.5rem;
             }
             &__image {
                 width: 90%;   
@@ -177,6 +189,13 @@
 
 .about-band {
     margin: 1rem;
+    &__title {
+        font-weight: 500;
+    }
+    &__text {
+        font-weight: 400;
+    }
+    
         /* Media queries */
         @include mixins.tablet {
             margin: 3rem;
@@ -226,6 +245,7 @@
 
     &__title {
         padding-top: 1rem;
+       
     }
         @include mixins.tablet {
             &__title {
@@ -247,6 +267,9 @@
                 margin: 0.5rem;
             }
         }
+        @include mixins.desktop {
+            margin: 5rem 5rem 0 5rem;
+        }
 }
 
 /* Footer */
@@ -257,34 +280,14 @@
 
     &__contact {
         margin: 0 1rem 1rem 1rem;
-        @include mixins.tablet {
-            display: flex;
-            margin-bottom: 0;
-        }
     }
     &__title {
         margin-top: 0;
         padding-top: 2rem;
-        @include mixins.tablet {
-            font-size: 2rem;
-            margin: 0 1rem 2rem 2rem;
-        }
     }
-        @include mixins.tablet {
-            &__container {
-                display: flex;
-                width: 100%;
-                padding: 1rem;
-            }
-        }
 
     &__manager {
         margin: 1rem;
-            @include mixins.tablet {
-                margin-right: 0;
-                width: 33%;
-                text-align: left;
-            }
     }
 
     &__copyright {
@@ -295,8 +298,40 @@
         margin-right: 1rem;
     }
     @include mixins.tablet {
+        &__contact {
+            display: flex;
+            margin-bottom: 0;
+        }
+        &__title {
+            font-size: 2rem;
+            margin: 0 1rem 2rem 2rem;
+        }
         &__socials {
             margin-top: 2.5rem;
+        }
+        &__manager {
+            margin-right: 0;
+            width: 33%;
+            text-align: left;
+        }
+         &__container {
+            display: flex;
+            width: 100%;
+            padding: 1rem;
+            }
+        
+    }
+    @include mixins.desktop {
+        &__manager {
+            margin-top: 0;
+            width: 20%;
+        }
+        &__container {
+            padding-top: 0;
+            margin-left: 2rem;
+        }
+        &__contact {
+            margin-left: 2rem;
         }
     }
 }
@@ -317,34 +352,46 @@
     }
 }
 
-.footer__copyright {
+.footer-copyright {
     margin: 3rem 1rem 0 1rem;
     padding-bottom: 1rem;
     @include mixins.tablet {
         margin-top: 0;
     }
     
+    
 }
 
-.footer__copyright-text {
+.footer-copyright__text {
     margin-bottom: 0;
+    font-weight: 400;
     @include mixins.tablet {
         font-size: 0.9rem;
-        margin: 0 0 2rem 0;
+        margin: 0 0 2rem 1rem;
     }
-}
-@include mixins.tablet {
-    .footer__copyright--selected {
-        position: absolute;
-        top: 2.8rem ;
-        right: 3rem;
+    @include mixins.desktop {
+        margin-left: 3rem;
     }
 }
 
-/*Steps to creating media queries using scss */
-// 1) Create variable names for the tablet & desktop
-//2) create a mix-in setting the parameters equal to variables
-// that you just created
-//3) ADD @content in media queries as placeholder
-// import mixins + use @include in the sections of the
-// css area you want to change 
+.footer-copyright {
+        @include mixins.tablet {
+            &--selected {
+                position: absolute;
+                top: 2.8rem ;
+                right: 3rem;
+            }
+        }
+
+        @include mixins.desktop {
+            &--selected {
+                right: 15rem;
+            }
+        }
+
+    
+}
+
+
+
+
