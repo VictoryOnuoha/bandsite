@@ -1,19 +1,21 @@
+ // Importing font family
  @font-face {
-    font-family: "AvenirNext LT Pro";
-    src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype") ;
-    font-weight: normal;
-    font-style: normal;
-}
+     font-family: "AvenirNext LT Pro";
+     src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+     font-weight: normal;
+     font-style: normal;
+ }
 
-@font-face {
-    font-family: "AvenirNext LT Pro";
-    src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype") ;
-    font-style: normal;
-    font-weight: bold;
-}
-@font-face {
-    font-family: "AvenirNext LT Pro";
-    src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-    font-weight: bold  ;
-    font-style: normal;
-}
+ @font-face {
+     font-family: "AvenirNext LT Pro";
+     src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+     font-style: normal;
+     font-weight: bold;
+ }
+
+ @font-face {
+     font-family: "AvenirNext LT Pro";
+     src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+     font-weight: bold;
+     font-style: normal;
+ }
