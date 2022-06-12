@@ -272,6 +272,9 @@ body {
   width: 100%;
   margin: 0.5rem 0 0.5rem 0;
 }
+.photo__box:hover {
+  filter: grayscale(100%);
+}
 .photo__title {
   padding-top: 1rem;
 }

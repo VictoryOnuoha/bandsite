@@ -242,6 +242,9 @@
         width: 100%;
         margin: 0.5rem 0 0.5rem 0 ;
     }
+    &__box:hover {
+        filter: grayscale(100%);
+    }
 
     &__title {
         padding-top: 1rem;
