@@ -143,6 +143,7 @@
     &__image {
         width: 100%;
     }
+         /* Media queries */
         @include mixins.tablet {
             &__container {
                 margin: 1.5rem 3rem 3rem 3rem;
@@ -156,11 +157,27 @@
                 font-weight:700;
             }
         }
+        @include mixins.desktop {
+                margin: 3rem;
+            &__title {
+                font-size: 1.8rem;
+            }
+            &__image {
+                width: 90%;   
+            }
+            &__quote {
+                font-size: 1.5rem;
+                width: 70%;
+            }
+            &__text {
+                font-size: 1.2rem;
+            }
+        }
 }
 
 .about-band {
     margin: 1rem;
-
+        /* Media queries */
         @include mixins.tablet {
             margin: 3rem;
 
@@ -182,6 +199,16 @@
                 font-weight: bold;
             }
         }
+        @include mixins.desktop {
+            &__title {
+                font-size: 1.5rem;
+                margin-left: 10rem;
+            }
+            &__text {
+                width: 35%;
+            }
+        }
+        
 }
 
 /* Gallery */

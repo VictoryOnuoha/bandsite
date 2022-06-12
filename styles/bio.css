@@ -166,6 +166,7 @@ body {
 
 .about-praise {
   margin: 1rem;
+  /* Media queries */
 }
 .about-praise__title {
   font-size: 2rem;
@@ -186,9 +187,28 @@ body {
     font-weight: 700;
   }
 }
+@media (min-width: 80rem) {
+  .about-praise {
+    margin: 3rem;
+  }
+  .about-praise__title {
+    font-size: 1.8rem;
+  }
+  .about-praise__image {
+    width: 90%;
+  }
+  .about-praise__quote {
+    font-size: 1.5rem;
+    width: 70%;
+  }
+  .about-praise__text {
+    font-size: 1.2rem;
+  }
+}
 
 .about-band {
   margin: 1rem;
+  /* Media queries */
 }
 @media (min-width: 48rem) {
   .about-band {
@@ -209,6 +229,15 @@ body {
     margin: 1.75rem 0 0 3rem;
     font-size: 1.8rem;
     font-weight: bold;
+  }
+}
+@media (min-width: 80rem) {
+  .about-band__title {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+  }
+  .about-band__text {
+    width: 35%;
   }
 }
 
