@@ -13,6 +13,9 @@
             display: flex;
             
         }
+        @include mixins.desktop {
+            padding: 1rem 0 0 3rem;
+        }
 
     &__image-container {
         padding: 1rem 0;
@@ -22,6 +25,7 @@
         width: 8rem;
         height: 1.5rem;
         margin: auto;
+            /* Media queries */
             @include mixins.tablet {
                 margin-left: 2rem;
             }
@@ -31,10 +35,12 @@
     &__navigation-list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        
+        align-self: flex-end;
         list-style-type: none;
         margin: 0;
         padding-left: 0;
+            /* Media queries */
             @include mixins.tablet {
                 padding-top: 0.7rem;
                 height: 100%;
@@ -51,6 +57,7 @@
         text-align: center;
         padding: 0.5rem;
         width: 50%;
+            /* Media queries */
             @include mixins.tablet {
                 font-size: 1rem;
                 margin-right: 2rem;
@@ -63,6 +70,7 @@
         border-bottom: 0.3rem solid colors.$secondary-white;
         width: 50%;
         font-weight: bold;
+                 /* Media queries */
             @include mixins.tablet {
                 border-bottom: 0.1rem solid colors.$secondary-white;
                
@@ -81,8 +89,12 @@
     width: 100%;
     display: flex;
     align-items: center;
+                /* Media queries */
         @include mixins.tablet {
             height: 30rem;
+        }
+        @include mixins.desktop {
+            height: 50rem;
         }
 
     &__title {
@@ -90,8 +102,13 @@
         color: colors.$primary-white;
         font-size: 1.5rem;
         z-index: 1;
+               /* Media queries */
             @include mixins.tablet {
                 font-size: 3.5rem;
+            }
+            @include mixins.desktop {
+                margin: 0 0 8rem 10rem;
+                font-size: 4rem;
             }
     }
     &--overlay {
@@ -99,8 +116,12 @@
         height: 15rem;
         width: 100%;
         position: absolute;
+               /* Media queries */
             @include mixins.tablet {
                 height: 30rem;
+            }
+            @include mixins.desktop {
+                height: 50rem;
             }
         
     }
