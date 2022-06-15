@@ -6,8 +6,8 @@ const comments = [
         timestamp: "02/17/2021",
         // Do we create the date as a  
         // string or a number?
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-
+        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+        userAvatar: ""
     },
     {
         name: "Emilie Beach",
