@@ -310,6 +310,31 @@
     }
 }
 
+/* Join the Conversation Section*/
+.form {
+    .form-title{
+        margin-left: 1rem;
+    }
+    /* Actual Form with input field  */
+    .form-container {
+        display: flex;
+        
+        &__column {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__avatar {
+            width: 2.25rem;
+            background-size:contain;
+            border-radius: 50%;
+            display: flex;
+        }
+    }
+}
+
+
+
 /* Footer */
 .footer {
     background-color: colors.$primary-black;

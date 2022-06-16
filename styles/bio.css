@@ -303,6 +303,27 @@ body {
   }
 }
 
+/* Join the Conversation Section*/
+.form {
+  /* Actual Form with input field  */
+}
+.form .form-title {
+  margin-left: 1rem;
+}
+.form .form-container {
+  display: flex;
+}
+.form .form-container__column {
+  display: flex;
+  flex-direction: column;
+}
+.form .form-container__avatar {
+  width: 2.25rem;
+  background-size: contain;
+  border-radius: 50%;
+  display: flex;
+}
+
 /* Footer */
 .footer {
   background-color: #323232;
