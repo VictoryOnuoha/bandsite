@@ -312,23 +312,67 @@
 
 /* Join the Conversation Section*/
 .form {
-    .form-title{
-        margin-left: 1rem;
+    display: flex;
+   
+
+    .form-header{
+        display: block;
+        
+
+        &__title {
+           color: colors.$primary-black;
+           margin-left: 1rem;
+        }
     }
+
     /* Actual Form with input field  */
     .form-container {
         display: flex;
-        
+        flex-direction: row;
+        width: 100%;
+
         &__column {
             display: flex;
-            flex-direction: column;
+           
+        }
+        &__row1 {
+            width: 20%;
+           margin-left: 1rem;
+        }
+        &__row2 {
+            width: 80%;
+        }
+        &__label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        &__input {
+            padding: 0.5rem;
+            border-radius: 0.35rem;
+            border: 0.06rem solid colors.$primary-silver;
+            margin-bottom: 1rem;
+            width: 90%;
+        }
+        &__text{
+            height: 6rem;
+        }
+        &__button {
+            background-color: colors.$primary-black;
+            color: colors.$primary-white;
+            display: block;
+            padding: 0.5rem 2rem;
+            margin-bottom: 1rem;
+            width: 90%;
+            border-radius: 0.25rem;
+            // max-height: ;
         }
     
         &__avatar {
-            width: 2.25rem;
+            width: 3rem;
+            height: 3rem;
             background-size:contain;
             border-radius: 50%;
-            display: flex;
+        
         }
     }
 }

@@ -305,23 +305,59 @@ body {
 
 /* Join the Conversation Section*/
 .form {
+  display: flex;
   /* Actual Form with input field  */
 }
-.form .form-title {
+.form .form-header {
+  display: block;
+}
+.form .form-header__title {
+  color: #323232;
   margin-left: 1rem;
 }
 .form .form-container {
   display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .form .form-container__column {
   display: flex;
-  flex-direction: column;
+}
+.form .form-container__row1 {
+  width: 20%;
+  margin-left: 1rem;
+}
+.form .form-container__row2 {
+  width: 80%;
+}
+.form .form-container__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form .form-container__input {
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  border: 0.06rem solid #AFAFAF;
+  margin-bottom: 1rem;
+  width: 90%;
+}
+.form .form-container__text {
+  height: 6rem;
+}
+.form .form-container__button {
+  background-color: #323232;
+  color: #FFFFFF;
+  display: block;
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  border-radius: 0.25rem;
 }
 .form .form-container__avatar {
-  width: 2.25rem;
+  width: 3rem;
+  height: 3rem;
   background-size: contain;
   border-radius: 50%;
-  display: flex;
 }
 
 /* Footer */
