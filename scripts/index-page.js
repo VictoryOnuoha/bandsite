@@ -24,3 +24,5 @@ const comments = [
 
 console.log(comments);
 console.table(comments);
+
+// 

@@ -311,19 +311,23 @@
 }
 
 /* Join the Conversation Section*/
+
+.form-header{
+    display: block;
+    
+
+    &__title {
+       color: colors.$primary-black;
+       margin-left: 1rem;
+       //Media queries
+       @include mixins.tablet {
+        margin-left: 3rem;
+        font-size: 2rem;
+       }
+    }
+}
 .form {
     display: flex;
-   
-
-    .form-header{
-        display: block;
-        
-
-        &__title {
-           color: colors.$primary-black;
-           margin-left: 1rem;
-        }
-    }
 
     /* Actual Form with input field  */
     .form-container {
@@ -373,6 +377,11 @@
             width: 30%;
             margin-left: 15rem;
             }
+            @include mixins.desktop {
+                width: 20%;
+                margin-left: 31.5rem;
+                font-size: 1rem;
+            }
         }
     
         &__avatar {
@@ -383,6 +392,9 @@
 
             @include mixins.tablet {
                 margin-left: 5rem;
+            }
+            @include mixins.desktop {
+                margin-left: 12rem;
             }
         }
     }
