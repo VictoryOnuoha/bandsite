@@ -24,17 +24,19 @@ const comments = [
 
 // console.table(comments);
 
-const commentEl = document.querySelector(".comment");  
+const commentEl = document.querySelector(".comment"); 
+ 
 
 function displayComment(comment) {
-    // comment card element
-    const commentCard = document.createElement("section");
-    commentCard.classList.add("comment-card");
+   // comment card element
+   const commentCard = document.createElement("section");
+   commentCard.classList.add("comment-card");
 
+    
     //  create image container 
     const imageContent = document.createElement("article");
     imageContent.classList.add("comment-container1");
-    commentEl.appendChild(imageContent);
+    commentCard.appendChild(imageContent);
 
     // Comment Image
     const commentImage = document.createElement("img");
@@ -45,7 +47,7 @@ function displayComment(comment) {
     // Comment container
     const commentContent = document.createElement("article");
     commentContent.classList.add("comment-container2");
-    commentEl.appendChild(commentContent);  
+    commentCard.appendChild(commentContent);  
 
     // name
     const commentName = document.createElement("span");
@@ -65,7 +67,8 @@ function displayComment(comment) {
     commentText.innerText = comment.comment;
     commentContent.appendChild(commentText);
 
-    commentEl.appendChild(commentCard);
+    commentEl.appendChild(commentCard); 
+   
    
 }
 
@@ -80,7 +83,7 @@ function displayComment(comment) {
    
 {/* <section class=                     "comment" >
 <section class="comment-card" > 
-<article class="comment-container1" >
+    <article class="comment-container1" >
         <img src="" class="comment-avatar"  />
     </article>
 
@@ -90,6 +93,6 @@ function displayComment(comment) {
         <p class="comment-container__comment" >This is art</p>
 
     </article>
-    </section>
+</section>
 </section> */}
 
