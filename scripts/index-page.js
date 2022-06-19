@@ -1,5 +1,4 @@
-// Create an Array of Objects to hold default comments
-
+// Array of Objects to hold default comments
 const comments = [
     {
         name: "Connor Walton",
@@ -23,18 +22,14 @@ const comments = [
     }
 ];
 
-// console.log(comments);
-console.table(comments);
+// console.table(comments);
 
-   
-    
-// Create Function to create comment 
+const commentEl = document.querySelector(".comment");  
+
 function displayComment(comment) {
-    //Display comment on page using DOM 
-
-     // .comment is primary container
-    // Select parent container via javascript 
-    const commentEl = document.querySelector(".comment");  
+    // comment card element
+    const commentCard = document.createElement("section");
+    commentCard.classList.add("comment-card");
 
     //  create image container 
     const imageContent = document.createElement("article");
@@ -70,26 +65,22 @@ function displayComment(comment) {
     commentText.innerText = comment.comment;
     commentContent.appendChild(commentText);
 
-    //Select Button 
-const buttonEl = document.querySelector("form-container__button");
-buttonEl.addEventListener("click", (event) => {
-    comments.forEach((comment), i => {
-        displayComment(comment[i]);
-        event.target.reset();
-    });
-  
-})
-
+    commentEl.appendChild(commentCard);
+   
 }
 
-
+    for (let i = 0; i < comments.length; i++ ) {
+        displayComment(comments[i]);
+        console.log(displayComment);
+    }
 
 
 
  
    
 {/* <section class=                     "comment" >
-    <article class="comment-container1" >
+<section class="comment-card" > 
+<article class="comment-container1" >
         <img src="" class="comment-avatar"  />
     </article>
 
@@ -99,6 +90,6 @@ buttonEl.addEventListener("click", (event) => {
         <p class="comment-container__comment" >This is art</p>
 
     </article>
-
+    </section>
 </section> */}
 
