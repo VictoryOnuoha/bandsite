@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/bio.css" rel="stylesheet" type="text/css">
-    <link href="../styles/shows.css" rel="stylesheet" type="text" >
+    <link href="../styles/shows.css" rel="stylesheet" type="text/css" >
+    <link href="../styles/partials/_global.scss" rel="stylesheet" type="text/css">
     <title>Shows</title>
 </head>
 <body>
     <header class="header">
 
         <section class="header__image-container">
-            <a href="./index.html">
+            <a href="../index.html">
                 <img class="header__image" src="../assets/Logo/Logo-bandsite.svg" alt="logo">
             </a>
         </section>
 
         <nav class="header__navigation">
             <ul class="header__navigation-list">
-                <li class="header__nav-list-item "> Biography</li>
-                <li class="header__nav-list-item header__nav-list-item--selected"> Shows</li>
+               <a href="../index.html" ><li class="header__nav-list-item "> Biography</li></a> 
+               <a href="./shows.html" ></a> <li class="header__nav-list-item header__nav-list-item--selected"> Shows</li>
             </ul>
         </nav>
 
     </header>
     <main>
          <!-- Hero Section -->
-         <section class="hero-image ">
-            <h1 class="hero-image__title"> Queen of Yellow x For the stings</h1>
-            <iframe width="100%" height="60rem" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1187711242&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-            <a href="https://soundcloud.com/ludovicoeinaudi" title="Ludovico Einaudi" target="_blank" style="color: #cccccc; text-decoration: none;">Ludovico Einaudi</a> ·
-            <a href="https://soundcloud.com/ludovicoeinaudi/rolling-like-a-ball" title="Rolling Like A Ball" target="_blank" style="color: #cccccc; text-decoration: none;">Rolling Like A Ball</a></div>
-            <div class="hero-image--overlay"></div>
+         <section class="hero-shows">
+            <p class="hero-shows__album" >Beautiful Beasts Album</p>
+            <h1 class="hero-shows__title"> Queen of Yellow x For The Stings</h1>
+            <article class="hero-shows__music" >
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1278190294&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+            </article>
+            <div class="hero-shows--overlay"></div>
         </section>
 
         <!-- Shows Section-->

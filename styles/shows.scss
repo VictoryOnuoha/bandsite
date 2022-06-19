@@ -4,3 +4,90 @@
 @use "./partials/mixins";
 @use "./partials/fonts";
 
+
+/* Hero Section */
+.hero-shows {
+    background-image: url(../assets/Images/hero-shows.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    /* Media queries */
+    @include mixins.tablet {
+        height: 30rem;
+    }
+
+    @include mixins.desktop {
+        height: 50rem;
+    }
+    &__title {
+        margin: 0 0 1rem 1rem;
+        color: colors.$primary-white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        z-index: 1;
+        width: 70%;
+        line-height: 2.5rem;
+
+        /* Media queries */
+        @include mixins.tablet {
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+
+        @include mixins.desktop {
+            margin: 0 0 8rem 10rem;
+            font-size: 4rem;
+            width: 45%;
+            line-height: 6rem;
+        }
+    }
+    &__music {
+        width: 18rem;
+        z-index: 1;
+        margin-left: 1rem;
+
+        @include mixins.tablet {
+            width: 30rem;
+            margin: 2rem 0 0 2rem ;
+        }
+        @include mixins.desktop {
+            position: absolute;
+            top: 15rem;
+            left: 45rem;
+        }
+    }
+    &__album {
+        color: colors.$primary-white;
+        z-index: 1;
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem 1rem;
+
+        @include mixins.tablet {
+            margin-top: 3rem;
+        }
+        @include mixins.desktop {
+            font-size: 2.5rem;
+            margin: 12rem 0 2rem 10rem;
+        }
+    }
+    &--overlay {
+        background-color: rgba(50, 50, 50, 0.5);
+        height: 23rem;
+        width: 100%;
+        position: absolute;
+
+        /* Media queries */
+        @include mixins.tablet {
+            height: 30rem;
+        }
+
+        @include mixins.desktop {
+            height: 50rem;
+        }
+    }
+}

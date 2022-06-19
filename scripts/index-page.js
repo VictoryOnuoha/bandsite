@@ -71,15 +71,39 @@ function displayComment(comment) {
    
    
 }
-
+    //Loop through comments array 
     for (let i = 0; i < comments.length; i++ ) {
         displayComment(comments[i]);
         console.log(displayComment);
     }
 
+    let formElement = document.querySelector(".form");
+    
+    formElement.addEventListener("submit", event => {
+        event.preventDefault();
 
+        // select inputs by value property
+        const fullName = event.target.fullName.value;
+        const userComment = event.target.userComment.value;
+        
+        comments.unshift(fullName);
+        comments.unshift(userComment);
+       
+        submitForm(comments);
+    });
 
- 
+    const submitForm = userValue => {
+         
+        for(let i = 0; i < userValue.length; i++ ) {
+            const newComment = document.createElement("p");
+            newComment.innerText = userValue[i];
+            commentEl.appendChild(newComment);
+        }
+    }
+
+    console.log(submitForm);
+
+    
    
 {/* <section class=                     "comment" >
 <section class="comment-card" > 

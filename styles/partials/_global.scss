@@ -1,3 +1,7 @@
+@use "../partials/colors";
+@use "../partials/fonts";
+@use "../partials/mixins";
+
 
 /* for every element before and
  after apply the border box property" */
@@ -10,4 +14,228 @@
 body {
     margin: 0;
     // font-family: Arial;
+}
+
+a {
+    text-decoration: none ;
+}
+
+/*  Header styling*/
+.header {
+    background-color: colors.$primary-black;
+
+    /* Media queries */
+    @include mixins.tablet {
+        display: flex;
+
+    }
+
+    @include mixins.desktop {
+        padding: 1rem 0 0 3rem;
+    }
+
+    &__image-container {
+        padding: 1rem 0;
+    }
+
+    &__image {
+        display: block;
+        width: 8rem;
+        height: 1.5rem;
+        margin: auto;
+
+        /* Media queries */
+        @include mixins.tablet {
+            margin-left: 2rem;
+        }
+
+    }
+
+    &__navigation-list {
+        display: flex;
+        justify-content: space-between;
+
+        align-self: flex-end;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+
+        /* Media queries */
+        @include mixins.tablet {
+            padding-top: 0.7rem;
+            height: 100%;
+            margin-left: 4rem;
+
+
+        }
+    }
+
+    &__nav-list-item {
+
+        color: colors.$primary-silver;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 700;
+        padding: 0.5rem;
+        width: 50%;
+
+        /* Media queries */
+        @include mixins.tablet {
+            font-size: 1rem;
+            margin-right: 2rem;
+            padding-bottom: 1rem;
+        }
+
+
+    }
+
+    &__nav-list-item--selected {
+        border-bottom: 0.3rem solid colors.$secondary-white;
+        color: colors.$primary-white;
+        width: 50%;
+        font-weight: bold;
+
+        /* Media queries */
+        @include mixins.tablet {
+            border-bottom: 0.1rem solid colors.$secondary-white;
+
+        }
+    }
+
+
+}
+
+
+/* Footer */
+.footer {
+    background-color: colors.$primary-black;
+    color: colors.$primary-white;
+    position: relative;
+    @include mixins.tablet {
+        margin-top: 2rem;
+    }
+    @include mixins.desktop {
+        margin-top: 3rem;
+    }
+    &__contact {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    &__title {
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+
+    &__manager {
+        margin: 1rem;
+    }
+
+    &__copyright {
+        margin: 1rem;
+    }
+
+    &__social {
+        margin-right: 1rem;
+    }
+
+    @include mixins.tablet {
+        &__contact {
+            display: flex;
+            margin-bottom: 0;
+        }
+
+        &__title {
+            font-size: 2rem;
+            margin: 0 1rem 2rem 2rem;
+        }
+
+        &__socials {
+            margin-top: 2.5rem;
+        }
+
+        &__manager {
+            margin-right: 0;
+            width: 33%;
+            text-align: left;
+        }
+
+        &__container {
+            display: flex;
+            width: 100%;
+            padding: 1rem;
+        }
+
+    }
+
+    @include mixins.desktop {
+        &__manager {
+            margin-top: 0;
+            width: 20%;
+        }
+
+        &__container {
+            padding-top: 0;
+            margin-left: 2rem;
+        }
+
+        &__contact {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.footer__manager-title {
+    margin: 0;
+
+    @include mixins.tablet {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+}
+
+.footer__manager-text {
+    width: 60%;
+
+    @include mixins.tablet {
+        width: 80%;
+    }
+}
+
+.footer-copyright {
+    margin: 3rem 1rem 0 1rem;
+    padding-bottom: 1rem;
+
+    @include mixins.tablet {
+        margin-top: 0;
+    }
+}
+
+.footer-copyright__text {
+    margin-bottom: 0;
+    font-weight: 400;
+
+    @include mixins.tablet {
+        font-size: 0.9rem;
+        margin: 0 0 2rem 1rem;
+    }
+
+    @include mixins.desktop {
+        margin-left: 3rem;
+    }
+}
+
+.footer-copyright {
+    @include mixins.tablet {
+        &--selected {
+            position: absolute;
+            top: 2.8rem;
+            right: 3rem;
+        }
+    }
+
+    @include mixins.desktop {
+        &--selected {
+            right: 15rem;
+        }
+    }
 }
