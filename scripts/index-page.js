@@ -26,7 +26,6 @@ const comments = [
 
 const commentEl = document.querySelector(".comment"); 
  
-
 function displayComment(comment) {
    // comment card element
    const commentCard = document.createElement("section");
@@ -74,7 +73,7 @@ function displayComment(comment) {
     //Loop through comments array 
     for (let i = 0; i < comments.length; i++ ) {
         displayComment(comments[i]);
-        console.log(displayComment);
+        // console.log(displayComment);
     }
 
     let formElement = document.querySelector(".form");
