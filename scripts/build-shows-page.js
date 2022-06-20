@@ -36,14 +36,15 @@ const concerts = [
 console.table(concerts);
 
 const concertCard = document.querySelector(".shows");
+ // Concert title element
+ const concertTitle = document.createElement("h2");
+ concertTitle.innerText = "Shows";
+ concertTitle.classList.add("shows__title");
+ concertCard.appendChild(concertTitle);
     console.log(concertCard)
 
  function displayConcert (concert) {
-    // Concert title element
-    const concertTitle = document.createElement("h2");
-    concertTitle.innerText = "Shows";
-    concertTitle.classList.add("shows__title");
-    concertCard.appendChild(concertTitle);
+   
 
     //concert card element
     const showsCard = document.createElement("section");
@@ -96,6 +97,7 @@ const concertCard = document.querySelector(".shows");
 
     //button
     const concertButton = document.createElement("button");
+    concertButton.classList.add("shows__button");
     concertButton.innerText = "BUY TICKETS";
     showsCard.appendChild(concertButton);
 
@@ -111,7 +113,7 @@ const concertCard = document.querySelector(".shows");
 
 //     <section class="shows__card" >
 //         <article class="shows__card-date" >
-//             <span>DATE</span>
+//             <span >DATE</span>
 //             <p> Mon Sept 06 2021 </p>
 //         </article>
 
@@ -125,7 +127,7 @@ const concertCard = document.querySelector(".shows");
 //             <p> San Francisco, CA </p>
 //         </article>
 
-//         <button> BUY TICKETS</button>
+//         <button class="shows__button"> BUY TICKETS</button>
 //     </section>
 
 // </section> */}
