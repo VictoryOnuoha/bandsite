@@ -24,14 +24,14 @@ const comments = [
 
 // console.table(comments);
 
-const commentEl = document.querySelector(".comment"); 
- 
-function displayComment(comment) {
-   // comment card element
-   const commentCard = document.createElement("section");
-   commentCard.classList.add("comment-card");
+const commentEl = document.querySelector(".comment");
 
-    
+function displayComment(comment) {
+    // comment card element
+    const commentCard = document.createElement("section");
+    commentCard.classList.add("comment-card");
+
+
     //  create image container 
     const imageContent = document.createElement("article");
     imageContent.classList.add("comment-container1");
@@ -46,7 +46,7 @@ function displayComment(comment) {
     // Comment container
     const commentContent = document.createElement("article");
     commentContent.classList.add("comment-container2");
-    commentCard.appendChild(commentContent);  
+    commentCard.appendChild(commentContent);
 
     // name
     const commentName = document.createElement("span");
@@ -66,56 +66,44 @@ function displayComment(comment) {
     commentText.innerText = comment.comment;
     commentContent.appendChild(commentText);
 
-    commentEl.appendChild(commentCard); 
-   
-   
+    commentEl.appendChild(commentCard);
+
+
 }
-    //Loop through comments array 
-    for (let i = 0; i < comments.length; i++ ) {
-        displayComment(comments[i]);
-        // console.log(displayComment);
+//Loop through comments array 
+for (let i = 0; i < comments.length; i++) {
+    displayComment(comments[i]);
+    // console.log(displayComment);
+}
+
+let formElement = document.querySelector(".form");
+
+formElement.addEventListener("submit", event => {
+    event.preventDefault();
+    const newComment = {};
+
+    // select inputs by value property
+    const fullName = event.target.fullName.value;
+    const userComment = event.target.userComment.value;
+
+    comments.unshift(fullName);
+    comments.unshift(userComment);
+    submitForm(comments);
+
+
+});
+
+const submitForm = userValue => {
+
+    for (let i = 0; i < userValue.length; i++) {
+        const newComment = document.createElement("p");
+        newComment.innerText = userValue[i];
+        commentEl.appendChild(newComment);
     }
+}
 
-    let formElement = document.querySelector(".form");
-    
-    formElement.addEventListener("submit", event => {
-        event.preventDefault();
 
-        // select inputs by value property
-        const fullName = event.target.fullName.value;
-        const userComment = event.target.userComment.value;
-        
-        comments.unshift(fullName);
-        comments.unshift(userComment);
-       
-        submitForm(comments);
-    });
 
-    const submitForm = userValue => {
-         
-        for(let i = 0; i < userValue.length; i++ ) {
-            const newComment = document.createElement("p");
-            newComment.innerText = userValue[i];
-            commentEl.appendChild(newComment);
-        }
-    }
 
-    console.log(submitForm);
 
-    
-   
-{/* <section class=                     "comment" >
-<section class="comment-card" > 
-    <article class="comment-container1" >
-        <img src="" class="comment-avatar"  />
-    </article>
-
-    <article class="comment-container2" >
-        <span class="comment-container__name" > Connor Walton</span>
-         <span class="comment-container__timestamp">02/17/2021</span>
-        <p class="comment-container__comment" >This is art</p>
-
-    </article>
-</section>
-</section> */}
 

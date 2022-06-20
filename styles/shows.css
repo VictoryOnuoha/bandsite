@@ -3,30 +3,32 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
-  font-style: normal;
+  font-style: 600;
   font-weight: bold;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 /* for every element before and
  after apply the border box property" */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: "AvenirNext LT Pro";
 }
 
 body {
   margin: 0;
+  font-family: "AvenirNext LT Pro", sans-serif;
 }
 
 a {
@@ -83,7 +85,7 @@ a {
   color: #AFAFAF;
   font-size: 1.2rem;
   text-align: center;
-  font-weight: 700;
+  font-weight: normal;
   padding: 0.5rem;
   width: 50%;
   /* Media queries */
@@ -179,6 +181,7 @@ a {
 
 .footer__manager-title {
   margin: 0;
+  font-size: 1rem;
 }
 @media (min-width: 48rem) {
   .footer__manager-title {

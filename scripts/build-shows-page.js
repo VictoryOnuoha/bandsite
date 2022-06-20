@@ -36,26 +36,26 @@ const concerts = [
 console.table(concerts);
 
 const concertCard = document.querySelector(".shows");
- // Concert title element
- const concertTitle = document.createElement("h2");
- concertTitle.innerText = "Shows";
- concertTitle.classList.add("shows__title");
- concertCard.appendChild(concertTitle);
-    console.log(concertCard)
+// Concert title element
+const concertTitle = document.createElement("h2");
+concertTitle.innerText = "Shows";
+concertTitle.classList.add("shows__title");
+concertCard.appendChild(concertTitle);
+console.log(concertCard)
 
- function displayConcert (concert) {
-   
+function displayConcert(concert) {
+
 
     //concert card element
     const showsCard = document.createElement("section");
     showsCard.classList.add("shows__card");
     concertCard.appendChild(showsCard);
-   
+
     //single card 
     const singleCard = document.createElement("article");
     singleCard.classList.add("shows__card-date");
     showsCard.appendChild(singleCard);
-    
+
     // single card date element
     const singlecardDates = document.createElement("span");
     singlecardDates.innerText = "DATE"
@@ -101,33 +101,9 @@ const concertCard = document.querySelector(".shows");
     concertButton.innerText = "BUY TICKETS";
     showsCard.appendChild(concertButton);
 
- }
-    //Loop through concerts array 
-    for(let i =0; i < concerts.length; i++ ) {
-        displayConcert(concerts[i]);
-    }
+}
+//Loop through concerts array 
+for (let i = 0; i < concerts.length; i++) {
+    displayConcert(concerts[i]);
+}
 
-// {/* <section class="shows" >
-
-//     <h2 class="shows__title">Shows</h2>
-
-//     <section class="shows__card" >
-//         <article class="shows__card-date" >
-//             <span >DATE</span>
-//             <p> Mon Sept 06 2021 </p>
-//         </article>
-
-//         <article class="shows__card-venue" >
-//             <span>VENUE</span>
-//             <p> Roland Lane </p>
-//         </article>
-
-//         <article class="shows__card-location" >
-//             <span>LOCATION</span>
-//             <p> San Francisco, CA </p>
-//         </article>
-
-//         <button class="shows__button"> BUY TICKETS</button>
-//     </section>
-
-// </section> */}

@@ -5,19 +5,21 @@
 
 /* for every element before and
  after apply the border box property" */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family: "AvenirNext LT Pro";
+
 }
 
 
 body {
     margin: 0;
-    // font-family: Arial;
+    font-family: "AvenirNext LT Pro", sans-serif;
 }
 
 a {
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 /*  Header styling*/
@@ -75,7 +77,7 @@ a {
         color: colors.$primary-silver;
         font-size: 1.2rem;
         text-align: center;
-        font-weight: 700;
+        font-weight: normal;
         padding: 0.5rem;
         width: 50%;
 
@@ -111,12 +113,15 @@ a {
     background-color: colors.$primary-black;
     color: colors.$primary-white;
     position: relative;
+
     @include mixins.tablet {
         margin-top: 2rem;
     }
+
     @include mixins.desktop {
         margin-top: 3rem;
     }
+
     &__contact {
         margin: 0 1rem 1rem 1rem;
     }
@@ -186,6 +191,7 @@ a {
 
 .footer__manager-title {
     margin: 0;
+    font-size: 1rem;
 
     @include mixins.tablet {
         font-size: 0.9rem;
