@@ -337,6 +337,9 @@ a {
 }
 
 /* Shows Section*/
+.shows__card:active {
+  background-color: #E1E1E1;
+}
 .shows__card {
   border-bottom: 0.07rem solid #AFAFAF;
 }

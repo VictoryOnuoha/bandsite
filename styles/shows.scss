@@ -95,7 +95,9 @@
 /* Shows Section*/
 .shows {
 
-    
+    &__card:active {
+        background-color: colors.$secondary-silver;
+    }
     &__card {
         border-bottom: 0.07rem solid colors.$primary-silver;
         @include mixins.tablet{ 

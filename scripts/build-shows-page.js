@@ -50,7 +50,7 @@ const concertCard = document.querySelector(".shows");
     const showsCard = document.createElement("section");
     showsCard.classList.add("shows__card");
     concertCard.appendChild(showsCard);
-    
+   
     //single card 
     const singleCard = document.createElement("article");
     singleCard.classList.add("shows__card-date");
