@@ -84,24 +84,34 @@ formElement.addEventListener("submit", event => {
 
     // select inputs by value property
     const fullName = event.target.fullName.value;
+    
     const userComment = event.target.userComment.value;
+   
+    newComment.name = fullName;
+    newComment.comment = userComment;
+    
+    
+    comments.unshift(newComment);
 
-    comments.unshift(fullName);
-    comments.unshift(userComment);
     submitForm(comments);
+    
 
 
 });
 
-const submitForm = userValue => {
 
+
+
+const submitForm = userValue => {
+    
     for (let i = 0; i < userValue.length; i++) {
         const newComment = document.createElement("p");
-        newComment.innerText = userValue[i];
+        newComment.innerText = userValue[i].name;
+        newComment.innerText = userValue[i].comment;
+        console.log(userValue[i]);
         commentEl.appendChild(newComment);
     }
 }
-
 
 
 
