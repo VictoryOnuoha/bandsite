@@ -71,43 +71,61 @@ function displayComment(comment) {
     commentEl.appendChild(commentCard);
 }
 
-
+//Create new comments 
 let formElement = document.querySelector(".form");
+    //Add event listener 
+    formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const newComment = {
+            name: event.target.fullName.value,
+            comment: event.target.userComment.value
+        };
 
-formElement.addEventListener("submit", event => {
-    event.preventDefault();
-    const newComment = {};
+    // Post new Comments 
+    axios
+    .post("https://project-1-api.herokuapp.com/comments?api_key=185f52d0-af7b-4577-8b06-8db46e0375c7", newComment)
+    .then(response => {
+        newCommentData = response.data
+        displayComment(newCommentData);
+    })
+    formElement.reset();
+})
 
-    // select inputs by value property
-    const fullName = event.target.fullName.value;
-    
-    const userComment = event.target.userComment.value;
+
+
+// formElement.addEventListener("submit", event => {
+//     event.preventDefault();
+//     const newComment = {};
+
+//     // select inputs by value property
+//     const fullName = event.target.fullName.value;
+//     const userComment = event.target.userComment.value;
    
-    newComment.name = fullName;
-    newComment.comment = userComment;
+//     newComment.name = fullName;
+//     newComment.comment = userComment;
     
     
-    comments.unshift(newComment);
+//     comments.unshift(newComment);
 
-    submitForm(comments);
+//     submitForm(comments);
     
 
 
-});
+// });
 
 
 
 
-const submitForm = userValue => {
+// const submitForm = userValue => {
     
-    for (let i = 0; i < userValue.length; i++) {
-        const newComment = document.createElement("p");
-        newComment.innerText = userValue[i].name;
-        newComment.innerText = userValue[i].comment;
-        console.log(userValue[i]);
-        commentEl.appendChild(newComment);
-    }
-}
+//     for (let i = 0; i < userValue.length; i++) {
+//         const newComment = document.createElement("p");
+//         newComment.innerText = userValue[i].name;
+//         newComment.innerText = userValue[i].comment;
+//         console.log(userValue[i]);
+//         commentEl.appendChild(newComment);
+//     }
+// }
 
 
 
