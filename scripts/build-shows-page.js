@@ -2,7 +2,8 @@
 // let apiKey = "185f52d0-af7b-4577-8b06-8db46e0375c7";
 
 
-const concertCard = document.querySelector(".shows");
+let concertCard = document.querySelector(".shows");
+// console.log(concertCard);
 
 // Concert title element
 const concertTitle = document.createElement("h2");
@@ -35,7 +36,12 @@ axios
 
 function displayConcert(show) {
     //Extract data from API ; Single item for now; the right data was extracted
+// console.log(show.date);
 const dateData = show.date;
+// const dateDataObj = new Date(dateData);
+//    console.log(typeof dateDataObj) ;
+//toLocaleDateString()
+console.log(dateData);
 const venueData = show.place;
 const locationData = show.location;
 
