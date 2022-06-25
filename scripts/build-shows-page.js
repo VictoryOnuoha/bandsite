@@ -35,12 +35,20 @@ axios
 })
 
 function displayConcert(show) {
-    //Extract data from API ; Single item for now; the right data was extracted
-// console.log(show.date);
+//Extract data from API ; date was string, converted to number
 const dateData = show.date;
-// const dateDataObj = new Date(dateData);
-//    console.log(typeof dateDataObj) ;
-//toLocaleDateString()
+console.log(typeof dateData);
+const newDateData = Number(dateData);
+const dateDataObj = new Date(newDateData)
+//Set date options for the object
+let options = { 
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+}
+const convertedDateData = dateDataObj.toLocaleDateString(undefined, options)
+console.log(convertedDateData);
 console.log(dateData);
 const venueData = show.place;
 const locationData = show.location;
@@ -63,7 +71,7 @@ singlecardDates.innerText = "DATE"
 singleCard.appendChild(singlecardDates);
 //date
 const singlecardDate = document.createElement("p");
-singlecardDate.innerText = dateData;
+singlecardDate.innerText = convertedDateData;
 singleCard.appendChild(singlecardDate);
 
 //single card venue 

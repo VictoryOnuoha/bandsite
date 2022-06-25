@@ -50,11 +50,12 @@ function displayComment(comment) {
     const nameData = comment.name;
 
     const timestampData = comment.timestamp;
+    console.log( typeof timestampData);
     const timestampDateObj = new Date (timestampData);
     const convertedTimestamp = timestampDateObj.toLocaleDateString(undefined);
     
     const commentData = comment.comment;
-    
+
     // comment card element
     const commentCard = document.createElement("section");
     commentCard.classList.add("comment-card");
