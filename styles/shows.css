@@ -65,6 +65,9 @@ a {
     margin-left: 2rem;
   }
 }
+.header__navigation-list a {
+  width: 45%;
+}
 .header__navigation-list {
   display: flex;
   justify-content: space-between;
@@ -83,7 +86,7 @@ a {
 }
 .header__nav-list-item {
   color: #AFAFAF;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: normal;
   padding: 0.5rem;
@@ -100,7 +103,7 @@ a {
 .header__nav-list-item--selected {
   border-bottom: 0.3rem solid #FAFAFA;
   color: #FFFFFF;
-  width: 50%;
+  width: 100%;
   font-weight: bold;
   /* Media queries */
 }
@@ -131,7 +134,8 @@ a {
 }
 .footer__title {
   margin-top: 0;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
 }
 .footer__manager {
   margin: 1rem;
@@ -182,6 +186,7 @@ a {
 .footer__manager-title {
   margin: 0;
   font-size: 1rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .footer__manager-title {

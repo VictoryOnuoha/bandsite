@@ -65,6 +65,9 @@ a {
     margin-left: 2rem;
   }
 }
+.header__navigation-list a {
+  width: 45%;
+}
 .header__navigation-list {
   display: flex;
   justify-content: space-between;
@@ -83,7 +86,7 @@ a {
 }
 .header__nav-list-item {
   color: #AFAFAF;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: normal;
   padding: 0.5rem;
@@ -100,7 +103,7 @@ a {
 .header__nav-list-item--selected {
   border-bottom: 0.3rem solid #FAFAFA;
   color: #FFFFFF;
-  width: 50%;
+  width: 100%;
   font-weight: bold;
   /* Media queries */
 }
@@ -131,7 +134,8 @@ a {
 }
 .footer__title {
   margin-top: 0;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
 }
 .footer__manager {
   margin: 1rem;
@@ -182,6 +186,7 @@ a {
 .footer__manager-title {
   margin: 0;
   font-size: 1rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .footer__manager-title {
@@ -247,7 +252,7 @@ a {
   height: 15rem;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   /* Media queries */
 }
@@ -278,6 +283,7 @@ a {
   .hero-image__title {
     margin: 0 0 8rem 10rem;
     font-size: 4rem;
+    line-height: 4rem;
   }
 }
 .hero-image--overlay {
@@ -310,12 +316,15 @@ a {
 .about-praise__title {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 2rem;
+  margin: 1.2rem 0 1rem 0rem;
 }
 .about-praise__image {
   width: 100%;
 }
 .about-praise__quote {
-  font-weight: 600;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
 }
 .about-praise__text {
   font-weight: 600;
@@ -340,6 +349,7 @@ a {
   }
   .about-praise__title {
     font-size: 2rem;
+    line-height: 3rem;
     margin-left: 1.5rem;
   }
   .about-praise__image {
@@ -359,10 +369,13 @@ a {
   /* Media queries */
 }
 .about-band__title {
-  font-weight: 500;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
 }
 .about-band__text {
   font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1rem;
 }
 @media (min-width: 48rem) {
   .about-band {
@@ -412,6 +425,8 @@ a {
 }
 .photo__title {
   padding-top: 1rem;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0 0;
 }
 @media (min-width: 48rem) {
   .photo__title {
@@ -501,6 +516,8 @@ a {
 }
 .form .form-container__text {
   height: 6rem;
+  font-family: inherit;
+  resize: none;
 }
 .form .form-container__button {
   background-color: #323232;
@@ -574,7 +591,7 @@ a {
   margin-right: 1rem;
 }
 .comment .comment-container2 {
-  width: 95%;
+  width: 100%;
 }
 .comment .comment-avatar {
   width: 3rem;
@@ -591,6 +608,10 @@ a {
   .comment .comment-avatar {
     margin-left: 4rem;
   }
+}
+.comment .comment-container {
+  display: flex;
+  justify-content: space-between;
 }
 .comment .comment-container__name {
   font-weight: bold;

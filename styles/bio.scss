@@ -4,9 +4,6 @@
 @use "../styles/partials/mixins";
 @use "../styles/partials/fonts";
 
-
-
-
 /* Hero Section*/
 .hero-image {
     background-image: url(../assets/Images/hero-bio.jpg);
@@ -15,7 +12,7 @@
     height: 15rem;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
     /* Media queries */
@@ -42,6 +39,7 @@
         @include mixins.desktop {
             margin: 0 0 8rem 10rem;
             font-size: 4rem;
+            line-height: 4rem;
         }
     }
 
@@ -74,8 +72,9 @@
 
     &__title {
         font-size: 1.5rem;
-
         font-weight: 700;
+        line-height: 2rem;
+        margin: 1.2rem 0 1rem 0rem;
     }
 
     &__image {
@@ -83,7 +82,8 @@
     }
 
     &__quote {
-        font-weight: 600;
+        font-weight: 700;
+        margin: 1rem 0 0 0;
     }
 
     &__text {
@@ -113,6 +113,7 @@
 
         &__title {
             font-size: 2rem;
+            line-height: 3rem;
             margin-left: 1.5rem;
         }
 
@@ -135,11 +136,14 @@
     margin: 1rem;
 
     &__title {
-        font-weight: 500;
+        font-weight: 600;
+        margin: 2rem 0 1rem 0;
     }
 
     &__text {
         font-weight: 400;
+        line-height: 1.5rem;
+        font-size: 1rem;
     }
 
     /* Media queries */
@@ -197,7 +201,8 @@
 
     &__title {
         padding-top: 1rem;
-
+        font-size: 1.5rem;
+        margin: 1.5rem 0 0 0;
     }
 
     @include mixins.tablet {
@@ -286,6 +291,8 @@
         }
         &__text{
             height: 6rem;
+            font-family: inherit;
+            resize: none;
         }
         &__button {
             background-color: colors.$primary-black;
@@ -355,7 +362,7 @@
         
     }
     .comment-container2 {
-        width: 95%;
+        width: 100%;
     }
     .comment-avatar {
             width: 3rem;
@@ -370,6 +377,10 @@
             @include mixins.desktop {
                 margin-left: 4rem;
             }
+    }
+    .comment-container {
+        display: flex;
+        justify-content: space-between;
     }
     .comment-container__name {
         font-weight: bold;

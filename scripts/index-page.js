@@ -54,16 +54,23 @@ function displayComment(comment) {
     const commentContent = document.createElement("article");
     commentContent.classList.add("comment-container2");
     commentCard.appendChild(commentContent);
+
+    // name & timestamp container
+    const userContainer = document.createElement("div");
+    userContainer.classList.add("comment-container"); 
+    commentContent.appendChild(userContainer);
+
     // name
     const commentName = document.createElement("span");
     commentName.classList.add("comment-container__name");
     commentName.innerText = nameData;
-    commentContent.appendChild(commentName);
+    userContainer.appendChild(commentName);
+    console.log(commentContent);
     //timestamp
     const commentTime = document.createElement("span");
     commentTime.classList.add("comment-container__timestamp");
     commentTime.innerText = convertedTimestamp;
-    commentContent.appendChild(commentTime);
+    userContainer.appendChild(commentTime);
     //comment
     const commentText = document.createElement("p");
     commentText.classList.add("comment-container__comment");

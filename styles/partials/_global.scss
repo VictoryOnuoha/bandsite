@@ -12,7 +12,6 @@
 
 }
 
-
 body {
     margin: 0;
     font-family: "AvenirNext LT Pro", sans-serif;
@@ -29,7 +28,6 @@ a {
     /* Media queries */
     @include mixins.tablet {
         display: flex;
-
     }
 
     @include mixins.desktop {
@@ -50,13 +48,14 @@ a {
         @include mixins.tablet {
             margin-left: 2rem;
         }
-
+    }
+    &__navigation-list a {
+        width: 45%;
     }
 
     &__navigation-list {
         display: flex;
         justify-content: space-between;
-
         align-self: flex-end;
         list-style-type: none;
         margin: 0;
@@ -67,15 +66,12 @@ a {
             padding-top: 0.7rem;
             height: 100%;
             margin-left: 4rem;
-
-
         }
     }
 
     &__nav-list-item {
-
         color: colors.$primary-silver;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
         font-weight: normal;
         padding: 0.5rem;
@@ -87,14 +83,12 @@ a {
             margin-right: 2rem;
             padding-bottom: 1rem;
         }
-
-
     }
 
     &__nav-list-item--selected {
         border-bottom: 0.3rem solid colors.$secondary-white;
         color: colors.$primary-white;
-        width: 50%;
+        width: 100%;
         font-weight: bold;
 
         /* Media queries */
@@ -128,7 +122,8 @@ a {
 
     &__title {
         margin-top: 0;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
     }
 
     &__manager {
@@ -192,6 +187,7 @@ a {
 .footer__manager-title {
     margin: 0;
     font-size: 1rem;
+    font-weight: 600;
 
     @include mixins.tablet {
         font-size: 0.9rem;
