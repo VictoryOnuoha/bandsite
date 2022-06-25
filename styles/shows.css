@@ -421,12 +421,13 @@ a {
   margin: 0 0 1rem 1rem;
   width: 90%;
   border-radius: 0.25rem;
+  border: 0 solid #323232;
   max-height: 2.5rem;
 }
 @media (min-width: 48rem) {
   .shows__button {
     width: 30%;
-    margin-left: 3rem;
+    margin: 0 1rem 1rem 0rem;
     font-size: 0.7rem;
   }
 }
