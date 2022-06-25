@@ -14,7 +14,6 @@ function getComments() {
             //Loop through comments array
             for (let i = 0; i < commentData.length; i++) {
                 displayComment(commentData[i]);
-                // console.log(displayComment);
             }
         })
         .catch(error => {
@@ -29,7 +28,6 @@ function displayComment(comment) {
     const nameData = comment.name;
     //Date
     const timestampData = comment.timestamp;
-    console.log(typeof timestampData);
     const timestampDateObj = new Date(timestampData);
     const convertedTimestamp = timestampDateObj.toLocaleDateString(undefined);
     //Comment
@@ -47,7 +45,7 @@ function displayComment(comment) {
     const commentImage = document.createElement("img");
     commentImage.classList.add("comment-avatar");
     commentImage.setAttribute("src", "./assets/images/comment-avatar.jpg");
-    console.log(commentImage);
+
     imageContent.appendChild(commentImage);
 
     // Comment container
@@ -57,7 +55,7 @@ function displayComment(comment) {
 
     // name & timestamp container
     const userContainer = document.createElement("div");
-    userContainer.classList.add("comment-container"); 
+    userContainer.classList.add("comment-container");
     commentContent.appendChild(userContainer);
 
     // name
@@ -65,7 +63,7 @@ function displayComment(comment) {
     commentName.classList.add("comment-container__name");
     commentName.innerText = nameData;
     userContainer.appendChild(commentName);
-    console.log(commentContent);
+
     //timestamp
     const commentTime = document.createElement("span");
     commentTime.classList.add("comment-container__timestamp");
@@ -88,20 +86,15 @@ formElement.addEventListener("submit", (event) => {
         name: event.target.fullName.value,
         comment: event.target.userComment.value
     };
-
     // Post new Comments
     axios
         .post("https://project-1-api.herokuapp.com/comments?api_key=185f52d0-af7b-4577-8b06-8db46e0375c7", newComment)
         .then(response => {
-            //     newCommentData = response.data
-            //    commentData.unshift(newCommentData);
-            // displayComment(newCommentData);
             getComments();
-            console.log(response.data);
-        })
-    console.log(newCommentData);
-    formElement.reset();
 
+        })
+
+    formElement.reset();
 })
 
 
