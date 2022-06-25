@@ -22,13 +22,9 @@ axios
 
     //Loop through api  array 
     for (let i = 0; i < showsData.length; i++) {
-    displayConcert(showsData[i]);
-    
+    displayConcert(showsData[i]); 
     }   
     console.log(showsData);
-
-
-
 })
 .catch(error => {
     console.log(error)
