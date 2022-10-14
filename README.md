@@ -8,6 +8,7 @@ It responsive with engaging designs and data
 from an API that displays artists concerts dates, times and users 
 comments. 
 
+This project is live at bandsite-rock-icon.herokuapp.com
 
 
 
